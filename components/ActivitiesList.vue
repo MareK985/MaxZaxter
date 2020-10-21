@@ -39,7 +39,40 @@
               ipsum dolor sit amet consectetur, adipisicing elit. Iure dolorum
               aspernatur voluptas quos, sequi quas libero incidunt aut
               distinctio voluptatem soluta est mollitia aliquam provident. Quas,
+              laboriosam? Neque, delectus nesciunt. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Tempora veritatis voluptatem dolores
+              quidem reiciendis, quasi maiores molestias temporibus doloremque
+              nemo eaque beatae consequatur possimus laborum soluta voluptates
+              nobis repudiandae error! Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Iure dolorum aspernatur voluptas quos, sequi
+              quas libero incidunt aut distinctio voluptatem soluta est mollitia
+              aliquam provident. Quas, laboriosam? Neque, delectus nesciunt.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+              veritatis voluptatem dolores quidem reiciendis, quasi maiores
+              molestias temporibus doloremque nemo eaque beatae consequatur
+              possimus laborum soluta voluptates nobis repudiandae error! Lorem
+              ipsum dolor sit amet consectetur, adipisicing elit. Iure dolorum
+              aspernatur voluptas quos, sequi quas libero incidunt aut
+              distinctio voluptatem soluta est mollitia aliquam provident. Quas,
+              laboriosam? Neque, delectus nesciunt. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Tempora veritatis voluptatem dolores
+              quidem reiciendis, quasi maiores molestias temporibus doloremque
+              nemo eaque beatae consequatur possimus laborum soluta voluptates
+              nobis repudiandae error! Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Iure dolorum aspernatur voluptas quos, sequi
+              quas libero incidunt aut distinctio voluptatem soluta est mollitia
+              aliquam provident. Quas, laboriosam? Neque, delectus nesciunt.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+              veritatis voluptatem dolores quidem reiciendis, quasi maiores
+              molestias temporibus doloremque nemo eaque beatae consequatur
+              possimus laborum soluta voluptates nobis repudiandae error! Lorem
+              ipsum dolor sit amet consectetur, adipisicing elit. Iure dolorum
+              aspernatur voluptas quos, sequi quas libero incidunt aut
+              distinctio voluptatem soluta est mollitia aliquam provident. Quas,
               laboriosam? Neque, delectus nesciunt.
+            </p>
+            <p class="read-more">
+              <a class="button" @click="showModal">Preberi celo zgodbo...</a>
             </p>
           </div>
         </div>
@@ -121,6 +154,17 @@
         <!-- END OF 2. slika -->
         <br />
         <br />
+        <!---- MODAL content -->
+        <section>
+          <div id="app">
+            <modal v-show="isModalVisible" @close="closeModal">
+              <template v-slot:body>
+                <ReadMore />
+              </template>
+            </modal>
+          </div>
+        </section>
+        <!-- end of MODAL --->
       </template>
       <template slot="tab-head-lily">
         CATALOGUE 2
@@ -150,16 +194,29 @@
 
 <script>
 import TabCard from "~/components/TabCard.vue";
+import modal from "~/components/Modal.vue";
+import ReadMore from "~/components/ReadMore.vue";
 
 export default {
   components: {
     TabCard,
+    modal,
+    ReadMore,
   },
   data() {
     return {
       initialTab: "james",
       tabs: ["james", "lily", "snape"],
+      isModalVisible: false,
     };
+  },
+  methods: {
+    showModal() {
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
+    },
   },
 };
 </script>
@@ -172,7 +229,7 @@ export default {
   font-family: "alphacentaurimedium";
   font-size: 7vh;
   font-weight: bold;
-  color: $base;
+  color: #757378;
   text-align: left;
   padding-bottom: 1em;
   padding-top: 1em;
@@ -195,12 +252,27 @@ export default {
 }
 .skica-text {
   display: inline-block;
+  position: relative;
+  overflow: hidden;
   max-width: 500px;
+  max-height: 550px;
   text-align: justify;
   font-size: 3.5vh;
   line-height: 2em;
   padding: 5px;
   margin: 5px;
+}
+.skica-text .read-more {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 30px 0;
+
+  /* "transparent" only works here because == rgba(0,0,0,0) */
+  background-image: linear-gradient(to bottom, transparent, white);
 }
 .slika {
   margin-top: 6em;

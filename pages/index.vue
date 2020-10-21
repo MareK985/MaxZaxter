@@ -145,10 +145,10 @@
       <MareUXLogo />
       <br />
       <div class="footer-text">
-        Matjaž Zakrajšek - Atelje MAX ZAXTER <br />
+        Atelje MAX ZAXTER <br />
         Stara vas 25, 1000 Ljubljana<br />
 
-        Copyright 2020 | 041 711 233 | matjaz.zakrajsek@gmail.com
+        Copyright 2020 | 041 711 233 | hello@maxzaxster.com
       </div>
     </footer>
 
