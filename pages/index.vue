@@ -2,9 +2,7 @@
   <div id="container">
     <section class="hero">
       <div class="hero-inner">
-        <div class="svg-container">
-          <MZlogoAnim />
-        </div>
+        <img class="mareUX" src="~assets/img/mz_logo_NOV.png" />
         <div class="atelje-name">
           <h1
             data-aos="fade-zoom-in"
@@ -13,7 +11,7 @@
             data-aos-delay="800"
             class="title"
           >
-            ATELJE MAX ZAXTER
+            ATELJE<br />MAX ZAXTER
           </h1>
         </div>
       </div>
@@ -226,7 +224,6 @@
 // import Fas from "~/components/Fas.vue";
 // import Fab from "~/components/Fab.vue";
 import VueSlickCarousel from "vue-slick-carousel";
-import MZlogoAnim from "~/components/mz_anim.vue";
 import MareUXLogo from "~/components/MareUXLogo.vue";
 import ActivitiesList from "~/components/ActivitiesList.vue";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
@@ -241,7 +238,6 @@ export default {
   components: {
     // Fas,
     // Fab,
-    MZlogoAnim,
     MareUXLogo,
     ActivitiesList,
     VueSlickCarousel,
@@ -274,7 +270,7 @@ h1 {
 
 .atelje-name {
   position: relative;
-  top: -20%;
+  top: 0;
 }
 
 .about-container {
@@ -401,8 +397,8 @@ h1 {
   /* Text styles suff */
   text-align: center;
   /* background styles */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(~assets/img/bg_zaki.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(~assets/img/maxzaxter_hero_web.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -486,23 +482,29 @@ ul li:active div {
 
 @media only screen and (max-width: 749px) {
   .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(~assets/img/bg_zaki.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url(~assets/img/maxzaxter_hero_mobile.jpg);
     background-attachment: initial;
   }
-
+  .mareUX {
+    width: 60%;
+    /* height: 100%; */
+    /* left: -5%; */
+  }
   .main-section {
     height: 620vh;
   }
 
   .title {
     margin-top: 1em;
-    font-size: 5.5vw;
+    font-size: 9.5vw;
     letter-spacing: 6px;
-    line-height: 2.5em;
+    line-height: 1.9em;
     text-align: center;
   }
-
+  .atelje-name {
+    bottom: 80%;
+  }
   .about-img {
     padding: 0em;
     margin: 5px;
