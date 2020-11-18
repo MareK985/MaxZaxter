@@ -11,7 +11,7 @@
             data-aos-delay="800"
             class="title"
           >
-            ATELJE<br />MAX ZAXTER
+            ATELJE<br />MAX ZAXSTER
           </h1>
         </div>
       </div>
@@ -397,8 +397,8 @@ h1 {
   /* Text styles suff */
   text-align: center;
   /* background styles */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(~assets/img/maxzaxter_hero_web.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)),
+    url(~assets/img/maxZaxster-hero.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -421,7 +421,7 @@ h1 {
 
 .title {
   display: block;
-  font-size: 3.5vw;
+  font-size: 4.5vw;
   color: white;
   letter-spacing: 5px;
   margin-top: 30px;
