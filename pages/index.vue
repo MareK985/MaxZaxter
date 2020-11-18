@@ -32,7 +32,7 @@
         </div>
       </div>
       <div data-aos="zoom-in">
-        <h1 class="main-title">CATALOGUES</h1>
+        <h1 class="main-title">SERIOGRAPHY</h1>
         <ActivitiesList />
       </div>
 
@@ -317,7 +317,7 @@ h1 {
 .main-section {
   transition: 0;
   padding-bottom: 300px; /* Height of the footer */
-  height: 800vh;
+  height: 1500vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)),
     url(~assets/img/bg_1.jpg);
   background-repeat: repeat-y;
@@ -442,19 +442,6 @@ ul li {
   background-position: center center;
   background-repeat: no-repeat;
 }
-#case-study1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(~assets/img/bg_zaki.jpg);
-}
-#case-study2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(~assets/img/bg_zaki.jpg);
-}
-
-#case-study3 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(~assets/img/bg_zaki.jpg);
-}
 
 ul li div {
   opacity: 0;
@@ -483,7 +470,7 @@ ul li:active div {
 @media only screen and (max-width: 749px) {
   .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url(~assets/img/maxzaxter_hero_mobile.jpg);
+      url(~assets/img/bg/maxzaxter-hero-mobile.jpg);
     background-attachment: initial;
   }
   .mareUX {
@@ -492,7 +479,7 @@ ul li:active div {
     /* left: -5%; */
   }
   .main-section {
-    height: 620vh;
+    height: 2300vh;
   }
 
   .title {

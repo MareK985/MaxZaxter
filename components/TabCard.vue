@@ -55,7 +55,7 @@ export default {
   background-color: #fff;
   border-radius: 6px;
   width: 100%;
-  height: 453vh;
+  height: 1230vh;
   box-shadow: 6px 0px 30px 0px #757378;
 }
 
@@ -98,7 +98,7 @@ export default {
 }
 @media screen and (max-width: 749px) {
   .card {
-    height: 350vh;
+    height: 2050vh;
   }
 }
 </style>
