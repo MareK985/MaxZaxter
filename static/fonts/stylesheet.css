@@ -16,3 +16,10 @@
   font-weight: bold;
   font-style: bold;
 }
+
+@font-face {
+  font-family: 'TrojanProBold';
+  src: url('~static/fonts/TrajanPro-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: bold;
+}

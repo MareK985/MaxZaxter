@@ -20,7 +20,7 @@
       <h1 class="main-title" data-aos="zoom-in">about</h1>
       <div class="about-container">
         <div class="about-img" data-aos="zoom-in-down" data-aos-duration="1500">
-          <img src="~assets/img/zaki_roke.jpg" />
+          <img src="~assets/img/ateljeMaxzaxster.jpg" />
         </div>
         <div class="about-text" data-aos="fade-left">
           <p class="predgovor">
@@ -335,6 +335,7 @@ h1 {
   margin-left: 3.5rem;
 }
 .main-title {
+  font-family: "TrojanProBold", Arial, sans-serif !important;
   font-size: 8vw;
   font-weight: 600;
   padding-top: 0.5em;
@@ -420,10 +421,11 @@ h1 {
 }
 
 .title {
+  font-family: "TrojanProBold", Arial, sans-serif !important;
   display: block;
-  font-size: 4.5vw;
+  font-size: 3vw;
   color: white;
-  letter-spacing: 5px;
+  letter-spacing: 40px;
   margin-top: 30px;
   line-height: 1.3em;
 }
@@ -484,8 +486,8 @@ ul li:active div {
 
   .title {
     margin-top: 1em;
-    font-size: 9.5vw;
-    letter-spacing: 6px;
+    font-size: 6.5vw;
+    letter-spacing: 20px;
     line-height: 1.9em;
     text-align: center;
   }
