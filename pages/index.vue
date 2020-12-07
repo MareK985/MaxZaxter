@@ -1,6 +1,43 @@
 <template>
   <div id="container">
-    <section class="hero">
+    <header class="header-area">
+      <!-- site-navbar start -->
+      <div class="navbar-area">
+        <div class="container">
+          <nav class="site-navbar">
+            <!-- site logo -->
+            <a href="#home" class="site-logo">MAX ZAXSTER</a>
+
+            <!-- site menu/nav -->
+            <ul>
+              <li><a href="#">Seriographies </a></li>
+              <li><a href="#">about</a></li>
+              <li><a href="#">contact</a></li>
+            </ul>
+            <!-- nav-toggler for mobile version only -->
+            <button class="nav-toggler" @click="isActive = !isActive">
+              <span></span>
+            </button>
+          </nav>
+          <div class="mobile_nav_items" :class="{ active: isActive }">
+            <ul>
+              <li><a href="#">Seriographies </a></li>
+              <li><a href="#">about</a></li>
+              <li><a href="#">contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- navbar-area end -->
+
+      <div class="intro-area">
+        <div class="container">
+          <!-- <h1>Responsive Navbar with pure JavaScript</h1>
+          <p>Please resize your browser and see the result</p> -->
+        </div>
+      </div>
+    </header>
+    <!-- <section class="hero">
       <div class="hero-inner">
         <img class="mareUX" src="~assets/img/mz_logo_NOV.png" />
         <div class="atelje-name">
@@ -15,7 +52,7 @@
           </h1>
         </div>
       </div>
-    </section>
+    </section> -->
     <section class="main-section">
       <h1 class="main-title" data-aos="zoom-in">about</h1>
       <div class="about-container">
@@ -234,6 +271,21 @@ import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 
+// const navToggler = document.querySelector(".nav-toggler");
+// const navMenu = document.querySelector(".site-navbar ul");
+// const navLinks = document.querySelectorAll(".site-navbar a");
+
+// // load all event listners
+// allEventListners();
+
+// // functions of all event listners
+// function allEventListners() {
+//   // toggler icon click event
+//   navToggler.addEventListener("click", togglerClick);
+//   // nav links click event
+//   navLinks.forEach((elem) => elem.addEventListener("click", navLinkClick));
+// }
+
 export default {
   components: {
     // Fas,
@@ -242,12 +294,235 @@ export default {
     ActivitiesList,
     VueSlickCarousel,
   },
+  data() {
+    return {
+      isActive: false,
+      // togglerClick: null,
+      // navLinkClick: null,
+    };
+  },
+  // methods: {
+  //   // togglerClick function //
+  //   togglerClick: function togglerClick() {
+  //     navToggler.classList.toggle("toggler-open");
+  //     navMenu.classList.toggle("open");
+  //   },
+  //   // navLinkClick function
+  //   navLinkClick: function navLinkClick() {
+  //     if (navMenu.classList.contains("open")) {
+  //       navToggler.click();
+  //     }
+  //   },
+  // },
 };
 </script>
 
 <style lang="css" scoped>
 @import "./../static/fonts/stylesheet.css";
 @import "./../css/style.css";
+
+/* default css start */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.header-area {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url(~assets/img/maxZaxster-hero.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+/* default css end */
+.mobile_nav_items {
+  background: rgba(0, 0, 0 0.7);
+  height: 100%;
+  line-height: 1em;
+  display: none;
+}
+.mobile_nav_items a {
+  color: white;
+  display: block;
+  text-align: center;
+  letter-spacing: 3px;
+  line-height: 60px;
+  font-size: 0.8em;
+
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: 0.5s;
+  transition-property: background;
+}
+.mobile_nav_items a:hover {
+  background: grey;
+}
+.mobile_nav_items .icon {
+  padding-right: 10px;
+  font-size: 1.4em;
+}
+.mobile_nav_items span {
+  padding-left: 10px;
+  font-size: 1.4em;
+}
+/* navbar regular css start */
+.navbar-area {
+  /* background: rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid #000; */
+}
+.site-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a.site-logo {
+  margin-top: 50px;
+  font-size: 36px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+}
+.site-navbar ul {
+  margin: 0;
+  padding: 0;
+  height: 100px;
+  list-style: none;
+  display: flex;
+}
+.site-navbar ul li a {
+  color: #fff;
+  padding: 20px;
+  letter-spacing: 5px;
+  font-size: 1em;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.site-navbar ul li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+/* navbar regular css end */
+
+/* nav-toggler css start */
+.nav-toggler {
+  border: 3px solid #fff;
+  padding: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 39px;
+  display: none;
+}
+.nav-toggler span,
+.nav-toggler span:before,
+.nav-toggler span:after {
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+.nav-toggler span:before {
+  content: "";
+  transform: translateY(-9px);
+}
+.nav-toggler span:after {
+  content: "";
+  transform: translateY(6px);
+}
+.nav-toggler.toggler-open span {
+  background-color: transparent;
+}
+.nav-toggler.toggler-open span:before {
+  transform: translateY(0px) rotate(45deg);
+}
+.nav-toggler.toggler-open span:after {
+  transform: translateY(-3px) rotate(-45deg);
+}
+/* nav-toggler css start */
+
+/* intro-area css start */
+.intro-area {
+  height: calc(100vh - 61px);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.intro-area h2 {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 50px;
+  margin-bottom: 25px;
+}
+.intro-area p {
+  font-size: 18px;
+}
+/* intro-area css end */
+
+/* mobile breakpoint start */
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 720px;
+  }
+  /* navbar css for mobile start */
+  .nav-toggler {
+    display: block;
+  }
+  .site-navbar {
+    min-height: 60px;
+  }
+  .site-navbar ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 60px);
+    left: 0;
+    top: 60px;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #444;
+    background-color: rgba(0, 0, 0, 0.75);
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  .site-navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+  .site-navbar ul li a {
+    padding: 25px;
+  }
+  .site-navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .site-navbar ul.open {
+    max-height: 100vh;
+    overflow: visible;
+  }
+  .intro-area h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+  a.site-logo {
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 600;
+  }
+  /* navbar css for mobile end */
+}
+/* mobile breakpoint end */
 
 h1 {
   font-family: "alphacentaurimedium", Arial, sans-serif !important;
@@ -470,7 +745,7 @@ ul li:active div {
 }
 
 @media only screen and (max-width: 749px) {
-  .hero {
+  .header-area {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
       url(~assets/img/bg/maxzaxter-hero-mobile.jpg);
     background-attachment: initial;
@@ -563,5 +838,8 @@ ul li:active div {
     text-align: left;
     padding: 20px;
   }
+}
+.active {
+  display: block;
 }
 </style>
