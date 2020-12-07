@@ -57,6 +57,7 @@ export default {
   width: 100%;
   height: 1230vh;
   box-shadow: 6px 0px 30px 0px #757378;
+  overflow-y: scroll;
 }
 
 .card-header {
@@ -68,6 +69,7 @@ export default {
   padding: 15px 8px 0;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
+  width: max-content;
 }
 
 .tab-heads {

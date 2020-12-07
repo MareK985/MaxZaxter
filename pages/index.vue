@@ -10,9 +10,16 @@
 
             <!-- site menu/nav -->
             <ul>
-              <li><a href="#">Seriographies </a></li>
-              <li><a href="#">about</a></li>
-              <li><a href="#">contact</a></li>
+              <li><a href="#seriography">Seriographies </a></li>
+              <li><a href="#about">about</a></li>
+              <li><a href="#contact">contact</a></li>
+
+              <!-- <nuxt-link :to="switchLocalePath('sl')" class="language"
+                >SL</nuxt-link
+              >
+              <nuxt-link :to="switchLocalePath('en')" class="language"
+                >EN</nuxt-link
+              > -->
             </ul>
             <!-- nav-toggler for mobile version only -->
             <button class="nav-toggler" @click="isActive = !isActive">
@@ -21,10 +28,16 @@
           </nav>
           <div class="mobile_nav_items" :class="{ active: isActive }">
             <ul>
-              <li><a href="#">Seriographies </a></li>
-              <li><a href="#">about</a></li>
-              <li><a href="#">contact</a></li>
+              <li><a href="#seriography">Seriographies </a></li>
+              <li><a href="#about">about</a></li>
+              <li><a href="#contact">contact</a></li>
             </ul>
+          </div>
+          <div class="langMenu">
+            <div class="language">SL</div>
+            <div class="language">EN</div>
+            <!-- <nuxt-link :to="switchLocalePath('sl')" class="language">SL</nuxt-link>
+            <nuxt-link :to="switchLocalePath('en')" class="language">EN</nuxt-link> -->
           </div>
         </div>
       </div>
@@ -53,7 +66,7 @@
         </div>
       </div>
     </section> -->
-    <section class="main-section">
+    <section id="about" class="main-section">
       <h1 class="main-title" data-aos="zoom-in">about</h1>
       <div class="about-container">
         <div class="about-img" data-aos="zoom-in-down" data-aos-duration="1500">
@@ -69,64 +82,91 @@
         </div>
       </div>
       <div data-aos="zoom-in">
-        <h1 class="main-title">SERIOGRAPHY</h1>
-        <ActivitiesList />
+        <h1 id="seriography" class="main-title">SERIOGRAPHIES</h1>
+
+        <!-- <ActivitiesList /> -->
       </div>
 
       <!-- PORTOFOLIO IMAGES -->
 
       <!-- PORTOFOLIO IMAGES -->
-      <!-- <ul>
+      <ul>
         <li id="case-study1" data-aos="fade-right">
-          <div class="case-title">#1: Svetina Ranch</div>
           <div>
-            <p class="case-short-description">
-              • UX Design <br />
-              • Web Development<br />
-              • SEO Optimization<br />
-              • Video Marketing
-              <br />
-            </p>
             <a href="projects/svetinaRanch" class="page-button"
-              >About the project</a
-            >
+              ><img
+                src="~assets/img/collagio_gold.png"
+                alt="slide"
+                class="collagio-name"
+            /></a>
           </div>
         </li>
-
-        <li id="case-study3" data-aos="fade-right">
-          <div class="case-title">#2: ExpAR store</div>
+        <li id="case-study1" data-aos="fade-right">
           <div>
-            <p class="case-short-description">
-              • Business Analytics<br />
-              • UX Design <br />
-              • FrontEnd Dev.<br />
-              • Video Marketing
-              <br />
-            </p>
-            <a href="projects/exparStore" class="page-button"
-              >About the project</a
-            >
+            <a href="projects/svetinaRanch" class="page-button"
+              ><img
+                src="~assets/img/collagio_gold.png"
+                alt="slide"
+                class="collagio-name"
+            /></a>
           </div>
         </li>
-
-        <li id="case-study2" data-aos="fade-right">
-          <div class="case-title">#3: Ruta Nature Resort</div>
+        <li id="case-study1" data-aos="fade-right">
           <div>
-            <p class="case-short-description">
-              • UX Design <br />
-              • Web Development<br />
-              • SEO Optimization<br />
-              • Video Marketing
-              <br />
-            </p>
-            <div style="font-size: 2em;">IN THE MAKING...</div>
+            <a href="projects/svetinaRanch" class="page-button"
+              ><img
+                src="~assets/img/collagio_gold.png"
+                alt="slide"
+                class="collagio-name"
+            /></a>
           </div>
         </li>
-      </ul> -->
+        <li id="case-study1" data-aos="fade-right">
+          <div>
+            <a href="projects/svetinaRanch" class="page-button"
+              ><img
+                src="~assets/img/collagio_gold.png"
+                alt="slide"
+                class="collagio-name"
+            /></a>
+          </div>
+        </li>
+        <li id="case-study1" data-aos="fade-right">
+          <div>
+            <a href="projects/svetinaRanch" class="page-button"
+              ><img
+                src="~assets/img/collagio_gold.png"
+                alt="slide"
+                class="collagio-name"
+            /></a>
+          </div>
+        </li>
+        <li id="case-study1" data-aos="fade-right">
+          <div>
+            <a href="projects/svetinaRanch" class="page-button"
+              ><img
+                src="~assets/img/collagio_gold.png"
+                alt="slide"
+                class="collagio-name"
+            /></a>
+          </div>
+        </li>
+        <li id="case-study1" data-aos="fade-right">
+          <div>
+            <a href="projects/svetinaRanch" class="page-button"
+              ><img
+                src="~assets/img/collagio_gold.png"
+                alt="slide"
+                class="collagio-name"
+            /></a>
+          </div>
+        </li>
+      </ul>
       <br />
       <br />
+    </section>
+    <section id="testimonials" class="testimonials">
       <h1 class="main-title" data-aos="zoom-in">testimonials</h1>
-
       <VueSlickCarousel :arrows="true" :dots="true">
         <div>
           <p class="quote">
@@ -174,12 +214,8 @@
       <div class="pecat-footer">
         <img class="pecat" src="~assets/img/pecat.png" alt="pecat" />
       </div>
-      <div class="podpis-footer">
-        <img class="podpis" src="~assets/img/podpis.svg" alt="podpis" />
-      </div>
-      <MareUXLogo />
       <br />
-      <div class="footer-text">
+      <div id="contact" class="footer-text">
         Atelje MAX ZAXTER <br />
         Stara vas 25, 1000 Ljubljana<br />
 
@@ -261,8 +297,8 @@
 // import Fas from "~/components/Fas.vue";
 // import Fab from "~/components/Fab.vue";
 import VueSlickCarousel from "vue-slick-carousel";
-import MareUXLogo from "~/components/MareUXLogo.vue";
-import ActivitiesList from "~/components/ActivitiesList.vue";
+// import MareUXLogo from "~/components/MareUXLogo.vue";
+// import ActivitiesList from "~/components/ActivitiesList.vue";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 // optional style for arrows & dots
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
@@ -290,8 +326,8 @@ export default {
   components: {
     // Fas,
     // Fab,
-    MareUXLogo,
-    ActivitiesList,
+    // MareUXLogo,
+    // ActivitiesList,
     VueSlickCarousel,
   },
   data() {
@@ -332,6 +368,11 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
+}
+.language {
+  color: white;
+  font-size: 1.8em;
+  margin: 0.5em;
 }
 .container {
   width: 100%;
@@ -469,8 +510,22 @@ a.site-logo {
 .intro-area p {
   font-size: 18px;
 }
-/* intro-area css end */
 
+.langMenu {
+  padding: 20px;
+  position: absolute;
+  right: 0;
+}
+.language {
+  color: white;
+  font-size: 1.8em;
+  margin: 0.5em;
+}
+/* intro-area css end */
+#case-study1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(~assets/img/collagio/interpretacija.jpg);
+}
 /* mobile breakpoint start */
 @media screen and (max-width: 767px) {
   .container {
@@ -479,6 +534,10 @@ a.site-logo {
   /* navbar css for mobile start */
   .nav-toggler {
     display: block;
+  }
+  .language {
+    font-size: 1em;
+    margin: 0.2em;
   }
   .site-navbar {
     min-height: 60px;
@@ -540,7 +599,7 @@ h1 {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 500px; /* Height of the footer */
+  height: 300px; /* Height of the footer */
 }
 
 .atelje-name {
@@ -592,7 +651,15 @@ h1 {
 .main-section {
   transition: 0;
   padding-bottom: 300px; /* Height of the footer */
-  height: 1500vh;
+  height: 500vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)),
+    url(~assets/img/bg_1.jpg);
+  background-repeat: repeat-y;
+}
+.testimonials {
+  transition: 0;
+  padding-bottom: 300px; /* Height of the footer */
+  height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)),
     url(~assets/img/bg_1.jpg);
   background-repeat: repeat-y;
@@ -756,7 +823,10 @@ ul li:active div {
     /* left: -5%; */
   }
   .main-section {
-    height: 2300vh;
+    height: 700vh;
+  }
+  .testimonials {
+    height: 120vh;
   }
 
   .title {

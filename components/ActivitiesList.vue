@@ -973,8 +973,12 @@
         <br />
       </template>
       <!-- 3. TAB -->
-      <!-- <template slot="tab-head-snape">
-        CATALOGUE 3
+      <template slot="tab-head-snape">
+        <img
+          src="~assets/img/collagio_gold.png"
+          alt="slide"
+          class="collagio-name"
+        />
       </template>
       <template slot="tab-panel-snape">
         <p>
@@ -983,7 +987,71 @@
           illum placeat corrupti quae quam architecto nobis obcaecati temporibus
           cupiditate.
         </p>
-      </template> -->
+      </template>
+      <!-- 4. TAB -->
+      <template slot="tab-head-hedonija">
+        <img
+          src="~assets/img/collagio_gold.png"
+          alt="slide"
+          class="collagio-name"
+        />
+      </template>
+      <template slot="tab-panel-hedonija">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut veritatis
+          ad, soluta rem nulla voluptas. Corporis animi, commodi suscipit earum
+          illum placeat corrupti quae quam architecto nobis obcaecati temporibus
+          cupiditate.
+        </p>
+      </template>
+      <!-- 5. TAB -->
+      <template slot="tab-head-paysage">
+        <img
+          src="~assets/img/collagio_gold.png"
+          alt="slide"
+          class="collagio-name"
+        />
+      </template>
+      <template slot="tab-panel-paysage">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut veritatis
+          ad, soluta rem nulla voluptas. Corporis animi, commodi suscipit earum
+          illum placeat corrupti quae quam architecto nobis obcaecati temporibus
+          cupiditate.
+        </p>
+      </template>
+      <!-- 6. TAB -->
+      <template slot="tab-head-noConcept">
+        <img
+          src="~assets/img/collagio_gold.png"
+          alt="slide"
+          class="collagio-name"
+        />
+      </template>
+      <template slot="tab-panel-noConcept">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut veritatis
+          ad, soluta rem nulla voluptas. Corporis animi, commodi suscipit earum
+          illum placeat corrupti quae quam architecto nobis obcaecati temporibus
+          cupiditate.
+        </p>
+      </template>
+      <!-- 7. TAB -->
+      <template slot="tab-head-ljubljana">
+        <img
+          src="~assets/img/collagio_gold.png"
+          alt="slide"
+          class="collagio-name"
+        />
+      </template>
+      <template slot="tab-panel-ljubljana">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut veritatis
+          ad, soluta rem nulla voluptas. Corporis animi, commodi suscipit earum
+          illum placeat corrupti quae quam architecto nobis obcaecati temporibus
+          cupiditate.
+        </p>
+      </template>
     </TabCard>
   </div>
 </template>
@@ -1002,7 +1070,15 @@ export default {
   data() {
     return {
       initialTab: "james",
-      tabs: ["james", "lily"], // add "snape" for 3. tab //
+      tabs: [
+        "james",
+        "lily",
+        "snape",
+        "hedonija",
+        "paysage",
+        "noConcept",
+        "ljubljana",
+      ], // add "snape" for 3. tab //
       isModalVisible: false,
     };
   },
@@ -1043,7 +1119,7 @@ export default {
 }
 
 .collagio-name {
-  max-width: 350px;
+  max-width: 180px;
 }
 
 .skica-container {
