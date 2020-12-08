@@ -609,6 +609,7 @@ h1 {
 
 .about-container {
   text-align: center;
+  background: black;
   padding: 15px;
 }
 .about-img {
@@ -621,6 +622,7 @@ h1 {
 }
 .about-text {
   display: inline-block;
+  background: rgba(0, 0, 0, 0.247) !important;
   max-width: 400px;
   text-align: left;
   padding: 5px;
